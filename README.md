@@ -23,7 +23,7 @@ https://youtu.be/K6I-RgsEC3E and https://youtu.be/9MH46gjimL8
 
 My first artifact to show my understanding of software design and engineering is from one of my first classes along my journey. I used Python in this assingment to create a game where the user is a dectective and needs to navigate a mansion and collect evidence before confronting the prime suspect. If the user is able to collect all of the evidence the suspect is arrested and the player wins. If the player confronts the suspect before collecting all of the evidence the suspect goes free. For this to be successful I had to create the map and allowable directions given the players current position. I also had to create and inventory and a system for removing evidence from a room once it was picked up by the user. The enhancement that I have done for this artifact is that I added a map funciton. This allows a user to see a map of the mansion. The map does not show the user which room they are in due to the game telling them once the enter a room what room they are in. I felt it was redundant and it adds a difficulty to the game as the user needs to pay attention. 
 
-To view the narrative | [(view narrative)]
+**To view the narrative** \| [(view narrative)]
 (https://github.com/ianb12134/ianb12134.github.io/blob/main/Software%20Design%20and%20Engineering/Narrative.pdf)
 
 Original code | click here
