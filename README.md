@@ -26,8 +26,8 @@ My first artifact to show my understanding of software design and engineering is
 **To view the narrative** \| [(view narrative)]
 (https://github.com/ianb12134/ianb12134.github.io/blob/main/Software%20Design%20and%20Engineering/Narrative.pdf)
 
-Original code | click here
-
+**Original code** \| [click here
+](https://github.com/ianb12134/ianb12134.github.io/blob/main/Software%20Design%20and%20Engineering/Original%20Code.txt)
 Enhanced code | click here
 
 ## Artifact 2: Algorithms and Data Structures
