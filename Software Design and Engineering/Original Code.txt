@@ -1,0 +1,117 @@
+def commands():
+    print('This is the Murder Mystery Game')
+    print('Collect 6 pieces of evidence and confront Mike to make the arrest')
+    print('If you confront Mike before you get all 7 pieces of evidence Mike with go free')
+    print('Move commands are: North, South, East, West')
+    print('Add to Inventory: get "item name"')
+    print('To exit game at any point enter "Exit"')
+
+
+def intro():
+    print('You are a senior detective sent to solve the murder of Mr. Smith')
+    print('You are informed that the relationship between Mr. Smith and Mike has become strained.')
+    print('You must search the mansion and find enough evidence to arrest the killer')
+
+
+# noinspection PyTypeChecker
+def game():
+    global item
+    rooms = {
+        'Foyer': {'name': 'Foyer', 'East': 'Lounge', 'text': 'You are in the Foyer.', 'item': "Mr. Smith's body"},
+        'Lounge': {'name': 'Lounge', 'West': 'Foyer', 'East': 'Bedroom', 'South': 'Library', 'North': 'Office',
+                   'text': 'You are in the lounge.', 'item': 'Conspiracy letter to sell the company'},
+        'Bedroom': {'name': 'Bedroom', 'West': 'Lounge', 'North': 'Bathroom', 'text': 'You are in the Bedroom.',
+                    'item': 'Broken safe with missing deeds'},
+        'Bathroom': {'name': 'Bathroom', 'South': 'Bedroom', 'text': 'You are in the Bathroom', 'item': 'Bloody sink'},
+        'Library': {'name': 'Library', 'North': 'Lounge', 'East': 'Game Room', 'item': 'Staged suicide note'},
+        'Game Room': {'name': 'Game Room', 'West': 'Library', 'East': 'Observatory',
+                      'text': 'You are in the Game Room.', 'item': 'Bloody bat(murder weapon)'},
+        'Observatory': {'name': 'Observatory', 'West': 'Game Room', 'text': 'You are in the Observatory.'},
+        'Office': {'name': 'Office', 'South': 'Lounge', 'East': 'Kitchen', 'text': 'You are in the Office.',
+                   'item': 'Security camera footage of an argument between Mike and Mr. Smith'},
+        'Kitchen': {'name': 'Kitchen', 'East': 'Office', 'text': 'You are in the Kitchen', 'boss': 'Mike'},
+        'Exit': {'name': 'Exit'}
+    }
+
+    directions = ['North', 'South', 'East', 'West', 'Exit']
+    actions = ['grab']
+    boss = ['Mike']
+    current_room = rooms['Foyer']
+    inventory = []
+
+    while True:
+        if 'item' in current_room:
+            item = current_room['item']
+            print('You see ', item + ' for evidence.')
+        else:
+            print('\nYou see no evidence in this room')
+        command = input('\nWhat do you want to do next?')
+        if command in directions:
+            if command not in current_room:
+                print('\nYou have walked into a closet.')
+            else:
+                current_room = rooms[current_room[command]]
+                show_status = (current_room, inventory, directions, actions)
+                print(show_status)
+                if command in rooms["Exit"]:
+                    user_input = input('Are you sure you want to quit? (yes or no): ')
+                    if user_input == 'yes':
+                        print('Thanks for playing.')
+                        break
+                    elif user_input == 'no':
+                        print('Returning you to the game')
+                        current_room = rooms['Foyer']
+                    else:
+                        print('Invalid input.')
+                        print('Returning you to game.')
+                        current_room = rooms['Foyer']
+                else:
+                    pass
+                if current_room == rooms['Kitchen']:
+                    if len(inventory) == 7:
+                        print('You confronted', boss, 'with enough evidence.')
+                        print('You have successfully made the arrest!')
+                        print('Thanks for playing')
+                        break
+                    else:
+                        print('You let', boss, 'get away with the murder!')
+                        print('Better luck next time.')
+                        print('GAME OVER')
+                        break
+        elif command in actions:
+            if 'item' not in current_room:
+                print('There is no evidence of value in this room')
+            else:
+                inventory.append(current_room['item'])
+                current_room.pop('item')
+                print('You have added: ', item, 'to your inventory.')
+        elif command == 'help':
+            commands()
+        else:
+            print('Invalid input.')
+
+
+commands()
+start = input('Are you ready to start? (yes or no)')
+if start == 'yes':
+    intro()
+    start = input('Are you ready to solve the murder of Mr. Smith?(yes or no)')
+    if start == 'yes':
+        game()
+    elif start == 'no':
+        commands()
+    else:
+        print('Invalid input.')
+        commands()
+elif start == 'no':
+    commands()
+else:
+    print('Invalid input.')
+    commands()
+
+replay = input('Do you want to play again?(yes or no)')
+replay = replay.lower
+if replay == 'yes':
+    commands()
+else:
+    print('See you for the next unsolved mystery!')
