@@ -34,19 +34,21 @@ My first artifact to show my understanding of software design and engineering is
 
 My second artifact to show my understanding of algorithms and data structures is one of the projects I am most proud of. In this artifact I used a basic AI algorithm to create a program that allowed machine learning. The program that I had to complete was a 'game' if you will for the AI. The AI was a pirate that was looking for a treasure chest. The goal of the AI algorithm is to take past attempts to find the chest and find a more efficient way to find it. The chest was randomized and the pirate was also randomized. The enhancement is that the pirate location is randomized. When I first cubmitted this project I was unable to get it to work properly so, for the enhancement I found a way to fix my error. Now the pirate and the treasure both have a random starting position and the AI still is able to learn from past attempts to get better at finding the chest. This machine learning is the basis for AI.
 
-To view the narrative | view narrative
+**To view the narrative** \| [view narrative](https://github.com/ianb12134/ianb12134.github.io/blob/main/Algorithms%20and%20Data%20Structure/Narrative.pdf)
 
-Original code | click here
+**Original code** \| [click here
+](https://github.com/ianb12134/ianb12134.github.io/blob/main/Algorithms%20and%20Data%20Structure/Original%20Code.ipynb)
 
-Enhanced code | click here
+**Enhanced code** \| [click here](https://github.com/ianb12134/ianb12134.github.io/blob/main/Algorithms%20and%20Data%20Structure/Enhanced%20Code.ipynb)
 
 ## Artifact 3: Databases
 
 My third and final artifact to show  my understanding of databses comes from DAD-220. This course was set up as a client had reached out to you and requested a SQL database be written for them. I then took all of the assingments and put them together to show how it grew into the final project for the course. The enhancement that was planned for this was to speak with the client about security issues and possibly moving the database to non-SQL. Ultimately the security that a physical SQL database won out based on the client's needs. I also tried to identify trends that the client was doing to attempt to make more specialized tools and tables for the client to use. This artifact shows my understanding of databases and balancing features and security.
 
-To view the narrative | view narrative
+**To view the narrative** \| [view narrative](https://github.com/ianb12134/ianb12134.github.io/blob/main/Databases/Narrative.pdf)
 
-Original code | click here
+**Original Artifact** \| [click here
+](https://github.com/ianb12134/ianb12134.github.io/blob/main/Databases/Original%20Artifact.pdf)
 
-Enhanced code | click here
+**Enhanced Artifact** \| [click here](https://github.com/ianb12134/ianb12134.github.io/blob/main/Databases/Enhanced%20Artifact.pdf)
 
